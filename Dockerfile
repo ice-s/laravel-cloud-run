@@ -16,4 +16,6 @@ RUN cd /app && \
 
 RUN chown -R www-data: /app
 
+WORKDIR /app
+
 CMD sh /app/_docker/startup.sh
