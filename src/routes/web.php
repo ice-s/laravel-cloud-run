@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ Route::get('/test-db', function () {
     }
 });
 
-Route::get('/test-evn', function () {
+Route::get('/test-env', function () {
     dd(getenv());
+});
+
+Route::get('/test-migrate', function () {
+    Artisan::call('migrate --force');
 });
