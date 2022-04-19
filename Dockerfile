@@ -20,6 +20,7 @@ RUN cd /app && \
     /usr/local/bin/composer install --no-dev
 
 RUN chown -R www-data: /app
+RUN cd /app && chmod -R 777 storage
 
 WORKDIR /app
 
