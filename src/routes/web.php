@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/test-db', function () {
+    if(DB::connection()->getDatabaseName())
+    {
+        echo "Yes! successfully connected to the DB: " . DB::connection()->getDatabaseName();
+    }
+});
+
+Route::get('/test-evn', function () {
+    dd(getenv());
 });
