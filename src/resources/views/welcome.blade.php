@@ -401,6 +401,6 @@
 </head>
 <body class="antialiased">
 <p>Cloud Run worked</p>
-<p>ver1.0</p>
+<p>ver1.1</p>
 </body>
 </html>
